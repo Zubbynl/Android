@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/zubbyGroen"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/zubbyGroenDonkerder"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_vertical|center_horizontal"
+        android:height="50dp"
+        android:onClick="requestLock"
+        android:text="@string/sendSignal"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/wit" />
+
+    <Button
+        android:id="@+id/btn_sign"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/zubbyGroenDonkerder"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_vertical|center_horizontal"
+        android:height="50dp"
+        android:onClick="registerPhone"
+        android:text="@string/RegisterPhone"
+        android:textAllCaps="false"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/wit" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_sign"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/headerText"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/wit"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/txt_pid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="200dp"
+        android:width="200dp"
+        android:layout_below="@+id/txt_pid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp" />
+
+</RelativeLayout>
